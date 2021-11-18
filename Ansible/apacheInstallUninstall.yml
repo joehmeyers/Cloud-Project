@@ -1,0 +1,13 @@
+## This is a sample playbook using the yml language
+---
+- name: my first playbook
+  hosts: webservers
+  become: true
+  tasks:
+
+## (state: present is optional)
+
+- name: Install apache httpd
+  apt:
+    name: apache2
+    state: present
